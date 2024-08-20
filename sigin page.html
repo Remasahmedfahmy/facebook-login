@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div id="big" class="big-contaner">
+            <div class="signin-box">
+                <input placeholder="Enter Your Email" type="email" name="email" id="ema">
+                <input placeholder="Enter Your Password" type="password" name="password" id="pass" >
+                <ion-icon id="eye" name="eye-off-outline"></ion-icon>
+                <ion-icon id="eye2" name="eye-outline"></ion-icon>
+                <a href="./main page.html"><button>Sign In Here</button></a>
+                <hr>
+                <button id="btnn" class="btnn">Create A New Account</button>
+            </div>
+            <div class="paragraph">
+                <h1>facebook</h1>
+                <p>Descover The World And Meet A New Freinds</p>
+                <div class="cont">
+                    <ion-icon class="icon" name="add-circle"></ion-icon>
+                    <p>Make A Acount</p>
+                </div>
+            </div>
+        </div>
+        <div id="boxx" class="contaner-sigin">
+            <h1>Make a New Acount</h1>
+            <p>Process Quekly And Fast</p>
+            <hr>
+            <input type="text" placeholder="First Name">
+            <input type="text" placeholder="Family Name">
+            <input type="email" placeholder="Email Or Phone Number">
+            <input type="password" placeholder="Password">
+            <input type="date" placeholder="Birthday">
+            <ion-icon id="ex" class="ex" name="close"></ion-icon>
+            <button id="btnn" class="btnn">Create A New Account</button>
+        </div>
+        <script src="./main.js"></script>
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+        <script>
+            let ema = document.getElementById("ema")
+            let pass = document.getElementById("pass")
+            let eye = document.getElementById("eye")
+            let eye2 = document.getElementById("eye2")
+            let btnn = document.getElementById("btnn")
+            let boxx = document.getElementById("boxx")
+            let big = document.getElementById("big")
+            let ex = document.getElementById("ex")
+
+            ema.onclick = function(){
+                ema.style.border = "1px solid blue"
+                ema.style.outline = "none"
+            }
+            pass.onclick = function(){
+                pass.style.border = "1px solid blue"
+                pass.style.outline = "none"
+            }
+            eye.onclick = function () {
+                eye2.style.display = "inline"
+                eye2.style.position ="absolute"
+                eye2.style.top = "28%"
+                eye2.style.left = "87%"
+                eye.style.display = "none"
+            }
+            btnn.onclick = function () {
+                boxx.style.display = "inline"
+                boxx.style.transition = "0.5s"
+                big.style.display = "none"
+            }
+            ex.onclick = function () {
+                boxx.style.display = "none"
+                big.style.display = "inline"
+            }
+        </script>
+    </body>
+</html>
